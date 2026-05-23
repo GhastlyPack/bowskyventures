@@ -17,11 +17,11 @@ const siteUrl = "https://bowskyventures.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Bowsky Ventures — Building and scaling early-stage companies",
+    default: "Bowsky Ventures",
     template: "%s · Bowsky Ventures",
   },
   description:
-    "Bowsky Ventures is a venture studio that builds and scales early-stage companies through strategic advisory, operational expertise, hands-on execution, and selective capital.",
+    "A venture studio. We back early-stage founders with capital and operating talent, and we stay involved until the work is done.",
   keywords: [
     "Bowsky Ventures",
     "Brandon Bowsky",
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     siteName: "Bowsky Ventures",
     title: "Bowsky Ventures",
     description:
-      "A venture studio building and scaling the next generation of category leaders.",
+      "We build companies. We back companies. Sometimes both.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Bowsky Ventures",
     description:
-      "A venture studio building and scaling the next generation of category leaders.",
+      "We build companies. We back companies. Sometimes both.",
   },
   robots: {
     index: true,

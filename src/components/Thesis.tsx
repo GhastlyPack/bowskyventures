@@ -1,18 +1,18 @@
 const pillars = [
   {
     label: "01",
-    title: "Operating expertise",
-    body: "We don't just write checks. We embed alongside founders — recruiting, building systems, and running the playbooks we've run before.",
+    title: "We bring operators.",
+    body: "Term sheets are easy. Finding people who've built it before and putting them in the room is the actual job. That's our work.",
   },
   {
     label: "02",
-    title: "Selective capital",
-    body: "Equity in exchange for the cash, talent, and infrastructure to compress years of growth into quarters.",
+    title: "We bring capital.",
+    body: "Selective and concentrated. Sized against the operating work we're already doing inside the business.",
   },
   {
     label: "03",
-    title: "Long horizons",
-    body: "We invest where we can stay involved. The work doesn't end at term sheet — it starts there.",
+    title: "We stick around.",
+    body: "Most check-writers disappear after the wire hits. We're still in the room a year in, two years in, however long it takes.",
   },
 ];
 
@@ -28,11 +28,11 @@ export function Thesis() {
             What we look for
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-foreground">
-            We back founders building businesses we&apos;d build ourselves.
+            We back the kind of companies we&apos;d start ourselves.
           </h2>
           <p className="mt-8 text-lg leading-relaxed text-[color:var(--muted)]">
-            Pre-seed through Series A. Sector-agnostic, with a bias toward
-            real-world businesses where operational leverage compounds.
+            Pre-seed to Series A. We&apos;re not picky about sector. We&apos;re
+            picky about founders.
           </p>
         </div>
 

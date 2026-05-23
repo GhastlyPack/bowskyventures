@@ -57,11 +57,13 @@ export function Contact() {
             <h2 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-foreground">
               Building something?
               <br />
-              <span className="text-[color:var(--muted)]">Let&apos;s talk.</span>
+              <span className="text-[color:var(--muted)]">
+                Tell us about it.
+              </span>
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-[color:var(--muted)]">
-              The best way to reach us is through this form. We read everything
-              and respond to founders we think we can help.
+              The form is the best way to reach us. We read every submission
+              and reply to the founders we think we can actually help.
             </p>
           </div>
 
@@ -69,10 +71,11 @@ export function Contact() {
             {status === "success" ? (
               <div className="rounded-2xl border border-[color:var(--accent)]/40 bg-[color:var(--accent)]/5 p-10 text-center">
                 <p className="font-mono text-xs tracking-[0.3em] uppercase text-[color:var(--accent)] mb-4">
-                  Message received
+                  Got it
                 </p>
                 <p className="text-xl text-foreground">
-                  Thanks for reaching out. We&apos;ll be in touch shortly.
+                  Thanks for writing in. We&apos;ll be back to you within a
+                  couple of days.
                 </p>
               </div>
             ) : (

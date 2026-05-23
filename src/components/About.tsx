@@ -47,20 +47,18 @@ export function About() {
             </h2>
             <div className="mt-10 space-y-6 text-lg leading-relaxed text-[color:var(--muted)]">
               <p>
-                Brandon Bowsky has spent his career building, scaling, and
-                exiting early-stage companies — wearing every hat from founder
-                to operator to investor along the way.
+                Brandon has built companies, run them, and invested in them.
+                Bowsky Ventures is what he started after the last one.
               </p>
               <p>
-                After a series of outcomes across consumer, technology, and
-                services businesses, he founded Bowsky Ventures to apply the
-                same playbook at scale: pair great founders with the operating
-                horsepower they actually need, and the capital to deploy it.
+                The pattern he kept seeing was always the same. Founders with
+                the vision, but no operating bench behind them. The studio
+                exists to be that bench.
               </p>
               <p>
-                The studio operates as a hybrid founder–operator — providing
-                the systems, talent, and capital required to accelerate growth
-                in exchange for equity.
+                We take equity. We bring capital and the team to deploy it
+                alongside the founder. The goal is to get to the next milestone
+                faster than they would alone.
               </p>
             </div>
           </div>
