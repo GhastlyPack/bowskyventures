@@ -44,6 +44,7 @@ If `CUSTOMERIO_SITE_ID` / `CUSTOMERIO_API_KEY` are missing, the route responds w
 
 Vercel will pick up the framework automatically. Domain `bowskyventures.com` is registered with GoDaddy — point the apex A record to Vercel's `76.76.21.21` (or use Vercel-managed nameservers) and add `www` as a CNAME to `cname.vercel-dns.com`. Vercel will provision TLS.
 
-## Replacing the placeholder portrait
+## Replacing the placeholder portraits
 
-Drop a real photo at `public/brandon.jpg` (or similar), then update the `<Image src=...>` in [`src/components/About.tsx`](src/components/About.tsx).
+- **Brandon:** drop a real photo at `public/brandon.jpg` (or similar) and update the `<Image src=...>` in [`src/components/About.tsx`](src/components/About.tsx).
+- **Team (Matthew Melzer, Cole Roemer, Michael Kuczynski, Matthew Allison):** the cards in [`src/components/Team.tsx`](src/components/Team.tsx) currently render an inline SVG monogram. Replace `<Avatar initials=... />` with `<Image src=... fill ... />` once photos arrive, and fill in the `linkedin` field on each member when you have URLs.

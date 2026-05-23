@@ -14,6 +14,9 @@ export function Nav() {
           <a href="#about" className="hover:text-foreground transition-colors">
             About
           </a>
+          <a href="#team" className="hover:text-foreground transition-colors">
+            Team
+          </a>
           <a href="#approach" className="hover:text-foreground transition-colors">
             Approach
           </a>
