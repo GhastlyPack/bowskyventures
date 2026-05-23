@@ -6,7 +6,8 @@ export function Footer() {
           Bowsky <span className="text-[color:var(--accent)]">Ventures</span>
         </p>
         <p className="text-xs text-[color:var(--muted)]">
-          © {new Date().getFullYear()} Bowsky Ventures. All rights reserved.
+          © 2024–{new Date().getFullYear()} Bowsky Ventures. All rights
+          reserved.
         </p>
         <div className="flex gap-6 text-xs text-[color:var(--muted)]">
           <a

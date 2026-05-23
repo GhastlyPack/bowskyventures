@@ -12,18 +12,16 @@ export function Hero() {
             Bowsky Ventures
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.02] tracking-tight text-foreground">
-            We build companies.
+            We build companies better, faster,
             <br />
             <span className="text-[color:var(--muted)]">
-              We back companies.
+              With billions in proven results.
             </span>
-            <br />
-            Sometimes both.
           </h1>
           <p className="mt-10 max-w-2xl text-lg md:text-xl leading-relaxed text-[color:var(--muted)]">
-            Bowsky Ventures is a venture studio. We invest capital and
-            operating talent in early-stage businesses, and we stay involved
-            until the work is done.
+            Bowsky Ventures is a unique venture studio that acts as a growth
+            accelerator. We partner with early stage and growth stage
+            businesses to build with them and do it better, faster.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row gap-4">
             <a
