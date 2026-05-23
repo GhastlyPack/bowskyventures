@@ -43,22 +43,24 @@ export function About() {
             <h2 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-foreground">
               Operator first.
               <br />
-              <span className="text-[color:var(--muted)]">Investor second.</span>
+              <span className="text-[color:var(--muted)]">
+                Consultant second.
+              </span>
             </h2>
-            <div className="mt-10 space-y-6 text-lg leading-relaxed text-[color:var(--muted)]">
+            <div className="mt-10 space-y-4 text-lg leading-relaxed text-[color:var(--muted)]">
               <p>
-                Brandon has built companies, run them, and invested in them.
-                Bowsky Ventures is what he started after the last one.
+                Brandon has built companies, run them, bought them and sold
+                them.
               </p>
               <p>
-                The pattern he kept seeing was always the same. Founders with
-                the vision, but no operating bench behind them. The studio
-                exists to be that bench.
+                Bowsky Ventures is what happens when you assemble a dream team
+                to do more.
               </p>
+              <p>More business with more talented founders.</p>
+              <p>Our mission is simple.</p>
               <p>
-                We take equity. We bring capital and the team to deploy it
-                alongside the founder. The goal is to get to the next milestone
-                faster than they would alone.
+                To get businesses to the next milestone (and the milestones
+                after that) faster than they would without us.
               </p>
             </div>
           </div>

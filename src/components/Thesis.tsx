@@ -7,12 +7,12 @@ const pillars = [
   {
     label: "02",
     title: "Proven systems.",
-    body: "We're experienced at building and leading machines to m&a events. From machines that have employed thousands to machines that have generated over $100m in a year — we've probably been there, done that, and can help you do it too.",
+    body: "We're experienced at building and leading machines to M&A events. From machines that have employed thousands to machines that have generated over $100m in a year. We've probably been there, done that, and can help you do it too.",
   },
   {
     label: "03",
     title: "We stick around.",
-    body: "Most Venture firms disappear after the wire hits. We're exclusively here for the long haul. If we're with you, we're with you forever life (or until an exit).",
+    body: "Most Venture firms disappear after the wire hits. We're exclusively here for the long haul. If we're with you, we're with you for life (or until an exit).",
   },
 ];
 
@@ -32,8 +32,8 @@ export function Thesis() {
           </h2>
           <div className="mt-8 space-y-4 text-lg leading-relaxed text-[color:var(--muted)]">
             <p>
-              Regardless of where you are in your journey — we may want to
-              help — but unlike most, we don&apos;t want worthless paper.
+              Regardless of where you are in your journey, we may want to
+              help. But unlike most, we don&apos;t want worthless paper.
             </p>
             <p>We&apos;re picky (just like you should be).</p>
           </div>
