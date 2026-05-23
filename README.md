@@ -44,6 +44,23 @@ If `CUSTOMERIO_SITE_ID` / `CUSTOMERIO_API_KEY` are missing, the route responds w
 
 Vercel will pick up the framework automatically. Domain `bowskyventures.com` is registered with GoDaddy — point the apex A record to Vercel's `76.76.21.21` (or use Vercel-managed nameservers) and add `www` as a CNAME to `cname.vercel-dns.com`. Vercel will provision TLS.
 
+## Brand assets
+
+The site's favicon, Apple touch icon, and Open Graph / Twitter share cards are derived from `brand/logo.png` (gold BB wreath on white). The generator strips the white to transparent, composites the logo onto the brand-dark background, and writes the four assets Next.js picks up by convention from `src/app/`:
+
+| File | Purpose |
+| --- | --- |
+| `src/app/icon.png` | Browser favicon (512×512) |
+| `src/app/apple-icon.png` | iOS home-screen icon (180×180) |
+| `src/app/opengraph-image.png` | OG share card (1200×630) |
+| `src/app/twitter-image.png` | Twitter card (1200×630, copy of OG) |
+
+To regenerate (e.g. after swapping the logo):
+
+```bash
+node scripts/generate-brand-assets.mjs
+```
+
 ## Replacing the placeholder portraits
 
 - **Brandon:** drop a real photo at `public/brandon.jpg` (or similar) and update the `<Image src=...>` in [`src/components/About.tsx`](src/components/About.tsx).
