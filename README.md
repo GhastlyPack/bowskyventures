@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# bowskyventures.com
 
-## Getting Started
+Marketing site for [Bowsky Ventures](https://www.linkedin.com/company/bowsky-ventures), a venture studio led by Brandon Bowsky.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- Deploys to Vercel
+- Contact form posts to Customer.io Track API
+
+## Local development
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in Customer.io credentials
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Set these in Vercel (Production + Preview) and in `.env.local` for development:
 
-## Learn More
+| Variable | Required | Notes |
+| --- | --- | --- |
+| `CUSTOMERIO_SITE_ID` | yes | Customer.io → Settings → API Credentials → Track API |
+| `CUSTOMERIO_API_KEY` | yes | Same place as above |
+| `CUSTOMERIO_REGION` | no | `us` (default) or `eu` |
+| `CUSTOMERIO_EVENT_NAME` | no | Defaults to `contact_form_submitted` |
 
-To learn more about Next.js, take a look at the following resources:
+## How the contact form works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. The form in [`src/components/Contact.tsx`](src/components/Contact.tsx) POSTs JSON to `/api/contact`.
+2. [`src/app/api/contact/route.ts`](src/app/api/contact/route.ts) validates the payload, then calls Customer.io:
+   - `PUT /api/v1/customers/{email}` to identify the person
+   - `POST /api/v1/customers/{email}/events` with event name `contact_form_submitted` and the form fields as event data
+3. In Customer.io, configure a **transactional message** (or campaign) triggered by the `contact_form_submitted` event. Use the `data.*` properties (name, email, company, message) in the email template. Add `brandon@bowskyventures.com` and any team recipients as the send-to addresses.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If `CUSTOMERIO_SITE_ID` / `CUSTOMERIO_API_KEY` are missing, the route responds with 503 instead of crashing, so the form stays visible without spam.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Vercel will pick up the framework automatically. Domain `bowskyventures.com` is registered with GoDaddy — point the apex A record to Vercel's `76.76.21.21` (or use Vercel-managed nameservers) and add `www` as a CNAME to `cname.vercel-dns.com`. Vercel will provision TLS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Replacing the placeholder portrait
+
+Drop a real photo at `public/brandon.jpg` (or similar), then update the `<Image src=...>` in [`src/components/About.tsx`](src/components/About.tsx).
